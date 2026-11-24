@@ -2,30 +2,43 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#082c25">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#062b23">
+<meta name="description" content="WMS CIDAHU - Warehouse Management System KINO PIA 100">
 <title>WMS CIDAHU | PIA 100 KINO</title>
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#082c25}
+html,body{margin:0;width:100%;min-height:100%;background:#062b23}
+body{font-family:Arial,Helvetica,sans-serif}
 .hero{
-  position:relative;width:100%;height:100vh;height:100dvh;
-  background:#082c25 url("background-cidahu.png") center center/100% 100% no-repeat;
+  position:relative;width:100%;height:100vh;height:100dvh;min-height:480px;
+  overflow:hidden;background:#062b23 url("desktop-cidahu.webp") center center/cover no-repeat;
 }
 .launch{
-  position:absolute;
-  /* Clickable area aligned with the WMS launch card in the background artwork */
-  left:39.5%;top:49.4%;width:18.5%;height:31.5%;
-  display:block;border-radius:24px;
-  text-decoration:none;background:transparent;
-  -webkit-tap-highlight-color:transparent;
-  transition:box-shadow .18s, background .18s;
+  position:absolute;left:39.5%;top:49.4%;width:18.5%;height:31.5%;
+  display:block;border-radius:24px;text-decoration:none;background:transparent;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
+  transition:background .18s,box-shadow .18s;
 }
-.launch:hover{background:rgba(45,255,160,.06);box-shadow:0 0 32px rgba(45,255,160,.24)}
+.launch:hover{background:rgba(45,255,160,.06);box-shadow:0 0 30px rgba(45,255,160,.18)}
 .launch:focus-visible{outline:3px solid #c5ffe1;outline-offset:5px}
 @media(max-width:700px){
-  .hero{background-size:100% 100%}
-  .launch{left:39.5%;top:49.4%;width:18.5%;height:31.5%;border-radius:18px}
+  .hero{
+    height:100svh;min-height:560px;
+    background-image:url("mobile-cidahu.webp");
+    background-position:center center;background-size:cover;
+  }
+  .launch{
+    left:22.8%;top:62.5%;width:54.5%;height:22.4%;
+    border-radius:22px;
+  }
+}
+@media(max-width:380px){
+  .hero{background-size:cover;background-position:center center}
+  .launch{left:21.5%;width:57%;top:62.5%;height:22.4%}
+}
+@media(hover:none){
+  .launch:hover{background:transparent;box-shadow:none}
 }
 </style>
 </head>
